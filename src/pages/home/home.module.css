@@ -1,0 +1,256 @@
+/* === الألوان الأساسية === */
+:root {
+    --dark-blue: #2C3E50;
+    --light-blue: #3498DB;
+    --light-gray-bg: #F7F9F9;
+    --beige-bg: #F4EAE0;
+    --green: #2ECC71;
+    --red: #E74C3C;
+    --text-gray: #5D6D7E;
+}
+
+/* === القسم الأول: Hero Section === */
+.heroSection {
+    padding: 6rem 0;
+    background-color: var(--light-gray-bg);
+}
+
+.heroImage {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.heroTitle {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--dark-blue);
+}
+
+.heroSubtitle {
+    font-size: 1.25rem;
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+}
+/* === القسم الثاني: Features Section === */
+.featuresSection {
+    padding: 5rem 0;
+    background-color: #ffffff;
+}
+
+.featureCard {
+    text-align: center;
+    padding: 2rem;
+    border: none;
+    background-color: transparent;
+}
+
+.featureIcon {
+    font-size: 4rem;
+    color: var(--light-blue);
+    margin-bottom: 1.5rem;
+}
+
+.featureTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--dark-blue);
+}
+
+.featureDescription {
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+
+/* === القسم الثالث: Featured Product === */
+.featuredSection {
+    padding: 5rem 0;
+    background-color: var(--beige-bg);
+}
+
+.featuredImage {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.featuredBadge {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--red);
+    border-radius: 50px;
+    margin-bottom: 1rem;
+}
+
+.featuredTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--dark-blue);
+}
+
+.featuredDescription {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    margin-bottom: 1.5rem;
+}
+
+.price {
+    margin-bottom: 2rem;
+}
+
+.newPrice {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--green);
+}
+
+.oldPrice {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    text-decoration: line-through;
+    margin-left: 0.75rem;
+}
+
+
+/* === القسم الرابع: قسم المدونة (بتأثير البطاقة القلابة) === */
+.blogSection {
+    padding: 5rem 0;
+    background-color: var(--light-gray-bg);
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* حاوية البطاقة الرئيسية */
+.blogCardContainer {
+    perspective: 1000px;
+    height: 480px;
+}
+
+/* البطاقة الداخلية التي ستقوم بالدوران */
+.blogCardInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 15px;
+}
+
+/* تطبيق الدوران عند إضافة كلاس .isFlipped */
+.isFlipped {
+    transform: rotateY(180deg);
+}
+
+/* تنسيق الوجهين (الأمامي والخلفي) */
+.cardFace {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* الوجه الأمامي */
+.cardFront {
+    background-color: #ffffff;
+}
+
+/* الوجه الخلفي */
+.cardBack {
+    background-color: var(--dark-blue);
+    color: #ffffff;
+    transform: rotateY(180deg);
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.blogImage {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.blogContent {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.blogTitle {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--dark-blue);
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+.blogMeta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    padding-top: 1rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+.flipButton {
+    color: var(--light-blue);
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    align-self: flex-start;
+    margin-top: 1rem;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.backTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--light-blue);
+    padding-bottom: 0.5rem;
+}
+
+.backDescription {
+    font-size: 1.25rem;
+    line-height: 2;
+    margin-bottom: 2rem;
+}
+
+.backButton {
+    font-size: 1rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    background-color: var(--light-blue);
+    border: none;
+    color: white;
+    cursor: pointer;
+}

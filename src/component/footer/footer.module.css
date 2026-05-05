@@ -1,0 +1,24 @@
+
+.footerLinks a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    border: none;
+    border-bottom: none ;
+}
+.footerLinks{
+    list-style: none;
+}
+.socialIcons{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.copyright{
+    padding: 1%;
+    background-color: black;
+    color: #ffffff;
+    font-size: 1.25rem;
+    text-align: center;
+}
