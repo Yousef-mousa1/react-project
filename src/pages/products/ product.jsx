@@ -53,7 +53,7 @@ export default function Product({ addToCart }) {
         {products.map(product => (
           <div key={product.id} className="col-lg-3 col-md-4 col-sm-6">
             <div className={styles.productCard}>
-              <img src={product.thumbnail} className={styles.productImage} alt={product.title} />
+            <img src={product.images[0]} className={styles.productImage} alt={product.title} />
               <div className={styles.cardBody}>
                 <h5 className={styles.productTitle}>{product.title}</h5>
                 <p className={styles.productDescription}>

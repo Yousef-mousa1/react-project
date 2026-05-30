@@ -31,7 +31,7 @@
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    flex-grow: 1; /* Makes title take available space */
+    flex-grow: 1; 
 }
 
 .productDescription {
@@ -43,9 +43,20 @@
 .productPrice {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #28a745; /* Green color for price */
+    color: #28a745; 
 }
 
 .productRating {
-    color: #ffc107; /* Yellow color for star */
+    color: #ffc107; 
+}
+@media (max-width: 576px) {
+    .productImage {
+        height: 160px;
+    }
+    .productTitle {
+        font-size: 0.95rem;
+    }
+    .productPrice {
+        font-size: 1rem;
+    }
 }

@@ -43,11 +43,11 @@ export default function Nav({ userData, logout, cartItemCount }) {
               <NavLink className="nav-link" to="/about">About Us</NavLink>
             </li>
           </ul>
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center">
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
             {userData ? (
              
               <>
-                <li className="nav-item me-3">
+                <li className="nav-item my-2 my-lg-0">
                   <Link to="/cart" className={`position-relative ${styles.cartIconContainer}`}>
                     <FontAwesomeIcon icon={faShoppingCart} size="lg" />
                     {cartItemCount > 0 && (
@@ -57,19 +57,19 @@ export default function Nav({ userData, logout, cartItemCount }) {
                     )}
                   </Link>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item my-2 my-lg-0">
                   <span className="navbar-text me-3">Hello, {userData.name}</span>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item my-2 my-lg-0">
                   <button className="btn btn-outline-success" onClick={logout}>Logout</button>
                 </li>
               </>
             ) : (
               <>
-                <li className="nav-item">
+               <li className="nav-item my-2 my-lg-0">
                   <Link className="btn btn-outline-primary me-2" to="/login">Login</Link>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item my-2 my-lg-0">
                   <Link className="btn btn-outline-primary" to="/register">Register</Link>
                 </li>
               </>
